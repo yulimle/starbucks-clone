@@ -7,7 +7,6 @@ body {
   font-weight: 400;
   line-height: 1.4;
   font-family: "Nanum Gothic", sans-serif;
-  height: 3000px;
 }
 a {
   text-decoration: none;
@@ -42,6 +41,46 @@ img {
   color: white;
   text-decoration: underline;
 }
+.btn--brown {
+  color: #633510;
+  border-color: #633510;
+  transition: 0.6s;
+}
+.btn--brown:hover {
+  background-color: #633510;
+  color: white;
+  text-decoration: underline;
+}
+.btn--gold {
+  border-color: #966932;
+  color: #966932;
+  transition: 0.6s;
+}
+.btn--gold:hover {
+  background-color: #966932;
+  color: white;
+  text-decoration: underline;
+}
+.btn--white {
+  color: #fff;
+  border-color: #fff;
+  transition: 0.6s;
+}
+.btn--white:hover {
+  color: black;
+  background-color: #fff;
+  text-decoration: underline;
+}
+.btn--black {
+  border-color: #000;
+  color: #000;
+  transition: 0.6s;
+}
+.btn--black:hover {
+  background-color: #000;
+  color: white;
+  text-decoration: underline;
+}
 /* HEADER */
 header {
   width: 100%;
@@ -73,8 +112,7 @@ header .inner .sub-menu {
 header .inner .sub-menu .sub-menu__menu {
   display: flex;
 }
-header .inner .sub-menu .sub-menu__menu > li {
-}
+
 header .inner .sub-menu .sub-menu__menu > li:not(:first-child)::before {
   position: absolute;
   top: 0;
@@ -128,8 +166,7 @@ header .inner .main-menu {
   bottom: 0;
   display: flex;
 }
-header .inner .main-menu .item {
-}
+
 header .inner .main-menu .item .item__name {
   padding: 10px 20px 34px 20px;
   font-size: 13px;
@@ -198,16 +235,7 @@ header
   > a:hover {
   text-decoration: underline;
 }
-header
-  .inner
-  .main-menu
-  .item
-  .item__contents
-  .item__contents__menu
-  .inner
-  > li
-  > ul {
-}
+
 header
   .inner
   .main-menu
@@ -283,8 +311,7 @@ header .badges .badge img {
   position: absolute;
   top: 250px;
 }
-.visual .inner img {
-}
+
 .visual .inner .item-1 {
   position: absolute;
   width: 290px;
@@ -480,5 +507,283 @@ header .badges .badge img {
   right: 0;
   bottom: 0;
 }
-.reward .inner .rewards__items .rewards__items__card .buttons .btn--login {
+
+/*Elsalvador*/
+.elsalvador {
+  position: relative;
+  height: 579px;
+  background-image: url("../images/elsalvador_bg.jpg");
+  background-size: 105%;
+  background-position: center;
+  overflow: hidden;
+  background-size: cover;
+}
+.elsalvador .inner {
+  position: relative;
+}
+.elsalvador .inner img.elsalvador__item {
+  position: absolute;
+  top: 70px;
+  left: 110px;
+  width: 310px;
+  transform: translateX(-700px);
+  opacity: 0;
+  transition: 2.5s;
+}
+.elsalvador .inner .elsalvador__contents {
+  position: absolute;
+  width: 339px;
+  top: 180px;
+  right: 140px;
+  transform: translateX(900px);
+  transition: 2.5s;
+  opacity: 0;
+}
+.elsalvador:active .inner img.elsalvador__item,
+.elsalvador:active .inner .elsalvador__contents {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.elsalvador .inner .elsalvador__contents .btn.btn--brown {
+  margin-top: 40px;
+}
+
+/*Ethiopia*/
+.ethiopia {
+  position: relative;
+  height: 400px;
+  background-image: url("../images/ethiopia_bg.png");
+  overflow: hidden;
+}
+.ethiopia::before {
+  position: absolute; /*디스플레이 자동으로 block*/
+  bottom: 0;
+  left: -50px;
+  content: "";
+  background-image: url("../images/ethiopia_before.png");
+  width: 425px;
+  height: 404px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  opacity: 0;
+}
+.ethiopia::after {
+  position: absolute;
+  content: "";
+  height: 404px;
+  width: 361px;
+  bottom: 0;
+  right: 0;
+  background-image: url("../images/ethiopia_after.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  opacity: 0;
+}
+.ethiopia:active::before,
+.ethiopia:active::after {
+  transition: 1.5s;
+  opacity: 1;
+}
+
+.ethiopia .inner {
+  position: relative;
+}
+.ethiopia .inner .ethiopia__contents {
+  position: absolute;
+  width: 496px;
+  left: 0;
+  top: 120px;
+}
+
+.ethiopia .inner .ethiopia__item {
+  position: absolute;
+  top: 0;
+  left: -500px;
+  opacity: 0;
+}
+.ethiopia:active .inner .ethiopia__item {
+  transition: 1.5s;
+  transition-delay: 0.8s;
+  opacity: 1;
+}
+.ethiopia .inner .btn.btn--gold {
+  position: absolute;
+  left: 260px;
+  top: 270px;
+}
+
+/*Favorite*/
+.favorite {
+  height: 800px;
+  background-attachment: fixed;
+  position: relative;
+  background-image: url("../images/fav_bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+}
+.favorite .inner {
+  position: relative;
+}
+.favorite .inner .favorite__img {
+  position: absolute;
+  width: 912px;
+  top: 100px;
+  right: -260px;
+}
+.favorite .inner .favorite__text-2 {
+  position: absolute;
+  top: 370px;
+  width: 362px;
+  transform: translateX(-700px);
+  opacity: 0;
+  transition: 2.5s;
+}
+.favorite .inner .favorite__text-1 {
+  position: absolute;
+  left: 108px;
+  top: 120px;
+  width: 258px;
+  transform: translateX(-700px);
+  opacity: 0;
+  transition: 2s;
+}
+.favorite:active .inner .favorite__text-2,
+.favorite:active .inner .favorite__text-1 {
+  transform: translateX(0);
+  opacity: 1;
+}
+.favorite .inner .btn.btn--white {
+  position: absolute;
+  top: 580px;
+  left: 238px;
+}
+
+/*Magazine*/
+.magazine {
+  overflow: hidden;
+  height: 400px;
+  position: relative;
+  background-repeat: no-repeat;
+  background-position: center 50px;
+  background-image: url("../images/magazine_bg.png");
+}
+.magazine .inner {
+  position: relative;
+}
+.magazine .inner .magazine__img {
+  position: absolute;
+  width: 348px;
+  right: 50px;
+  top: 0px;
+  opacity: 0;
+  transition: 1.5s;
+}
+.magazine:active .inner .magazine__img {
+  opacity: 1;
+}
+
+.magazine .inner .magazine__text {
+  position: absolute;
+  top: 135px;
+  left: 60px;
+  width: 588px;
+}
+.magazine .inner .btn.btn--black {
+  position: absolute;
+  top: 270px;
+  left: 295px;
+}
+
+.store {
+  position: relative;
+  height: 400px;
+  background-image: url("../images/store_bg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+.store .inner {
+  height: 400px;
+}
+
+.store .inner .store__text-1 {
+  position: absolute;
+  width: 385px;
+  top: 100px;
+  right: 50px;
+  transform: translateX(800px);
+  transition: 2s;
+}
+
+.store .inner .store__text-2 {
+  position: absolute;
+  width: 366px;
+  top: 170px;
+  right: 69px;
+  transform: translateX(800px);
+  transition: 2.5s;
+}
+
+.store .inner .btn.btn--black {
+  position: absolute;
+  top: 290px;
+  right: 330px;
+  transform: translateX(800px);
+}
+
+.store:active .inner .store__text-1,
+.store:active .inner .store__text-2 {
+  transform: translateX(0);
+}
+
+.store:active .inner .btn.btn--black {
+  transform: translateX(0);
+  transition: transform 3s, background-color 0.6s, color 0.6s,
+    text-decoration 0.6s;
+}
+
+.store .inner .store__img-1 {
+  position: absolute;
+  width: 366px;
+  top: 0;
+  left: 70px;
+  opacity: 0;
+  transition: 1.5s;
+}
+
+.store .inner .store__img-2 {
+  position: absolute;
+  width: 228px;
+  top: 150px;
+  left: 300px;
+  opacity: 0;
+  transition: 1.5s;
+}
+
+.store .inner .store__img-3 {
+  position: absolute;
+  width: 348px;
+  top: -60px;
+  left: 430px;
+  opacity: 0;
+  transition: 1.5s;
+}
+
+.store .inner .store__img-4 {
+  position: absolute;
+  width: 230px;
+  right: -70px;
+  bottom: 0px;
+  opacity: 0;
+  transition: 1.5s;
+}
+
+.store:active .inner .store__img-1,
+.store:active .inner .store__img-2,
+.store:active .inner .store__img-3,
+.store:active .inner .store__img-4 {
+  opacity: 1;
 }
